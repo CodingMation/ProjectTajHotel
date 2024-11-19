@@ -1,79 +1,171 @@
-*{
-    margin: 0;padding: 0;box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    height: 100vh;
-}
-header{
-    width: 100%;
+
+html, body {
     height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
     color: white;
 }
-header video{
+
+header video {
     height: 100%;
     width: 100%;
 }
-header nav{
-    position: absolute;
+
+header nav {
+    position: fixed;
     top: 0;
     height: 10%;
     width: 100%;
-    /* background-color: rgba(0, 0, 0, .5); */
+    background-color: white;
+    box-shadow: 0 1px 10px black;
 }
-header nav ul{
+
+header nav ul {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-header nav ul li{
+
+header nav ul li {
     list-style: none;
 }
-#a{
+
+#a {
     height: 60px;
     width: 60px;
     background-image: url(./asd.jpg);
     background-size: 100% 100%;
 }
-.links{
+
+.links {
     text-decoration: none;
-    color: white;
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(188, 181, 0);
 }
-#s{
+
+#s {
     margin-left: 100px;
 }
-.btn{
+
+.btn {
     border: none;
     padding: 14px;
     background-color: rgb(188, 181, 0);
 }
-section{
-        width: 100%;
-        height: 100%;
+
+.btn .links {
+    color: white;
 }
-footer{
-    padding: 20px 100px;
+
+section {
+    width: 100%;
+    flex-grow: 1;
+}
+
+section main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+section main .mh {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section main .mh h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px 20px;
+    font-size: 200%;
+    color: grey;
+}
+
+.aft, .bef {
+    font-family: 'Courier New', Courier, monospace;
+    height: 0.4vh;
+    width: 10%;
+    background-color: grey;
+}
+
+section main .mp {
+    text-align: center;
+    width: 50%;
+}
+
+section main .dimg {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+}
+
+.dimg div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dimg div img {
+    width: 99%;
+    height: 60vh;
+}
+
+.dimg div span {
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    position: relative;
+    bottom: 10vh;
+    font-size: 25px;
+    color: white;
+}
+
+/* footer */
+footer {
+    padding: 20px 80px;
     width: 100%;
     color: white;
     background-color: black;
     display: block;
 }
-.ihcl{
+
+.ihcl {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.ihcl .subscribe{
+
+.ihcl .subscribe {
     padding: 35px 0;
 }
-.ihcl .subscribe .sub span{
+
+.ihcl .subscribe .sub span {
     color: grey;
     font-size: 18px;
     font-weight: bold;
-
 }
-.inp input{
+
+.inp input {
     padding: 10px 0;
     border: none;
     outline: none;
@@ -83,103 +175,131 @@ footer{
     margin: 14px 0;
     font-size: 18px;
 }
-.inp button{
+
+.inp button {
     background-color: grey;
     margin: 14px 7px;
     padding: 10px;
     font-size: 18px;
 }
-.book, .customer{
+
+.book, .customer {
     margin: 14px 0;
 }
-.book span, .customer span{
+
+.book span, .customer span {
     color: rgb(107, 105, 105);
     font-size: 20px;
     font-weight: bold;
+}
 
+.book .bc, .customer .cs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
-.book .bc, .customer .cs{
-    display: flex;
-    justify-content: space-between;
-}
-.book .bc a, .customer .cs a{
+
+.book .bc a, .customer .cs a {
     text-decoration: none;
     color: rgb(200, 200, 200);
     margin: 10px 0;
-    margin-right: 10px;
     font-size: 18px;
 }
 
-.ihcl .linksf{
+.ihcl .linksf {
     padding: 35px 0;
 }
-.ihcl .linksf span{
+
+.ihcl .linksf span {
     color: grey;
     font-size: 20px;
     font-weight: bold;
 }
-.linksf .lnk{
+
+.linksf .lnk {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.linksf .lnk a{
-    padding-right:50px;
+
+.linksf .lnk a {
+    padding-right: 50px;
     text-decoration: none;
     color: rgb(200, 200, 200);
     margin: 5px 0;
     font-size: 20px;
 }
-.ihcl .connect{
+
+.ihcl .connect {
     padding: 35px 0;
 }
-.ihcl .connect span{
+
+.ihcl .connect span {
     color: grey;
     font-size: 20px;
     font-weight: bold;
 }
-.connect i img{
+
+.connect .logob {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.connect i img {
     margin: 10px 10px 00px 0px;
     width: 30px;
     height: 30px;
 }
-.destination{
+
+.destination {
     display: flex;
     font-size: 20px;
     padding: 20px 0;
     font-weight: bolder;
     justify-content: space-between;
 }
-.destination .des{
+
+.destination .des {
     color: grey;
 }
-.brand h1{
+
+.brand h1 {
     margin: 20px 0;
 }
-.brand .logoc{
+
+.brand .logob {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
-.brand i img{
+
+.brand i img {
     margin: 20px 0;
     margin-right: 30px;
     width: 110px;
     height: 80px;
 }
-.copy{
+
+.copy {
     display: flex;
-    justify-content: space-between;
-    padding: 30px 0;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     color: grey;
 }
-.copyl{
+
+.copyl {
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
-.copyl div{
+
+.copyl div {
     display: flex;
     justify-content: flex-end;
 }
-.copyl div a{
+
+.copyl div a {
     text-decoration: none;
     padding: 0 10px;
     color: rgb(200, 200, 200);
