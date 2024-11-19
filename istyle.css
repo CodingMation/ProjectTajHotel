@@ -194,8 +194,11 @@ footer {
 }
 
 .book .bc, .customer .cs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    width: 50%;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+
 }
 
 .book .bc a, .customer .cs a {
@@ -297,6 +300,7 @@ footer {
 .copyl div {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .copyl div a {
