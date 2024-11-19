@@ -7,6 +7,11 @@
 
 html, body {
     height: 100%;
+    --w : white;
+    --b : black;
+    --g : grey;
+    --gr : rgb(200, 200, 200);
+    --y : rgb(188, 181, 0);;
 }
 
 body {
@@ -17,7 +22,7 @@ body {
 header {
     width: 100%;
     height: 100vh;
-    color: white;
+    color: var(--w);
 }
 
 header video {
@@ -30,8 +35,9 @@ header nav {
     top: 0;
     height: 10%;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 1px 10px black;
+    background-color: var(--w);
+    box-shadow: 0 1px 10px var(--b);
+    z-index: 9;
 }
 
 header nav ul {
@@ -56,7 +62,7 @@ header nav ul li {
     text-decoration: none;
     font-size: larger;
     font-weight: bold;
-    color: rgb(188, 181, 0);
+    color: var(--y);
 }
 
 #s {
@@ -66,19 +72,20 @@ header nav ul li {
 .btn {
     border: none;
     padding: 14px;
-    background-color: rgb(188, 181, 0);
+    background-color: var(--y);
 }
 
 .btn .links {
-    color: white;
+    color: var(--w);
 }
 
 section {
     width: 100%;
     flex-grow: 1;
 }
+/* main 1 */
 
-section main {
+section .main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,33 +93,33 @@ section main {
     flex-shrink: 1;
 }
 
-section main .mh {
+section .main .mh {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-section main .mh h1 {
+section .main .mh h1 {
     font-family: 'Courier New', Courier, monospace;
     margin: 50px 20px;
-    font-size: 200%;
-    color: grey;
+    font-size: 300%;
+    color: var(--g);
 }
 
 .aft, .bef {
     font-family: 'Courier New', Courier, monospace;
     height: 0.4vh;
     width: 10%;
-    background-color: grey;
+    background-color: var(--g);
 }
 
-section main .mp {
+section .main .mp {
     text-align: center;
     width: 50%;
 }
 
-section main .dimg {
+section .main .dimg {
     margin: 100px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -136,15 +143,370 @@ section main .dimg {
     position: relative;
     bottom: 10vh;
     font-size: 25px;
-    color: white;
+    color: var(--w);
 }
+/* main1 end */
+/* main2  */
+
+section .main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+}
+section .main2 .m2h{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+section .main2 .m2h .mh {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+section .main2 .m2h .mh h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px 10px;
+    font-size: 300%;
+    color: var(--g);
+}
+
+.aft, .bef {
+    font-family: 'Courier New', Courier, monospace;
+    height: 0.4vh;
+    width: 10%;
+    background-color: var(--g);
+}
+
+section .main2 .mp {
+    margin: 0 10px;
+    width: 50%;
+}
+
+section .main2 .dimg2 {
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dimg2 .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.dimg2 .data img {
+    width: 99%;
+    height: 60vh;
+}
+
+.dimg2 .data span {
+    margin: 0 30%;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    width: 70%;
+    bottom: 5vh;
+    font-size: 18px;
+    background-color: var(--w);
+    box-shadow: -10px 5px 10px var(--b);
+}
+.dimg2 .data span p{
+    color: var(--g);
+}
+.dimg2 .data span a{
+    color: var(--y);
+}
+/* main2 end */
+/* main3  */
+
+section .main3 {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./cmmoon.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+}
+section .main3 .m2h{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+section .main3 .m2h .mh {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .main3 .m2h .mh h1 {
+    text-align: center;
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px 10px;
+    font-size: 300%;
+    color: var(--gr);
+}
+
+.aft3, .bef3 {
+    font-family: 'Courier New', Courier, monospace;
+    height: 0.4vh;
+    width: 10%;
+    background-color: var(--gr);
+}
+
+section .main3 .mp {
+    color: var(--g);
+    margin: 0 10px;
+    width: 50%;
+}
+section .main3 .slider{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.slider .left{
+font-size: 20px;
+display: flex;
+align-items: center;
+}
+.left p{
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    color: var(--gr);
+    border: 1px solid var(--gr);
+    border-radius: 50%;
+    background-color: var(--g);
+}
+.left span{
+    margin: 0 30px;
+    color: var(--gr);
+}
+.slider .center{
+background-color: var(--w);
+}
+.center .datai{
+    color: var(--g);
+    text-align: center;
+    padding: 30px;
+}
+.datai h6{
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.datai p{
+    padding: 10px 0;
+}
+.datai a{
+    padding-top: 10px;
+    color: var(--y);
+}
+
+.slider .center img{
+width: 40vw;
+height: 50vh;
+}
+.slider .right{
+font-size: 20px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+.right p{
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    color: var(--gr);
+    border: 1px solid var(--gr);
+    border-radius: 50%;
+    background-color: var(--g);
+}
+.right span{
+    margin: 0 30px;
+    color: var(--gr);
+}
+
+/* main3 end */
+/* main4 */
+
+section .main4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+}
+section .main4 .m2h{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+section .main4 .m2h .mh {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .main4 .m2h .mh h1 {
+    text-align: center;
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px 10px;
+    font-size: 300%;
+    color: var(--gr);
+}
+
+.aft3, .bef3 {
+    font-family: 'Courier New', Courier, monospace;
+    height: 0.4vh;
+    width: 10%;
+    background-color: var(--gr);
+}
+
+section .main4 .mp {
+    color: var(--g);
+    margin: 0 10px;
+    width: 50%;
+}
+section .main4 .dimg2 {
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dimg2 .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.dimg2 .data img {
+    width: 99%;
+    height: 60vh;
+}
+
+.dimg2 .data span {
+    margin: 0 30%;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    width: 70%;
+    bottom: 5vh;
+    font-size: 18px;
+    background-color: var(--w);
+    box-shadow: -10px 5px 10px var(--b);
+}
+.dimg2 .data span p{
+    color: var(--g);
+}
+.dimg2 .data span a{
+    color: var(--y);
+}
+
+/* main4 end */
+
+/* main5 */
+
+section .main5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+}
+section .main5 .m2h{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+section .main5 .m2h .mh {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .main5 .m2h .mh h1 {
+    text-align: center;
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px 10px;
+    font-size: 300%;
+    color: var(--gr);
+}
+
+.aft3, .bef3 {
+    font-family: 'Courier New', Courier, monospace;
+    height: 0.4vh;
+    width: 10%;
+    background-color: var(--gr);
+}
+
+section .main5 .mp {
+    color: var(--g);
+    margin: 0 10px;
+    width: 50%;
+}
+.mp a{
+    color: var(--y);
+}
+section .main5 .dimg2 {
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dimg2 .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.dimg2 .data img {
+    width: 99%;
+    height: 60vh;
+}
+
+ .main5.dimg2 .data span {
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    font-size: 18px;
+    background-color: var(--w);
+    box-shadow: -10px 5px 10px var(--b);
+}
+.dimg2 .data span p{
+    color: var(--g);
+}
+
+
+/* main5 end */
 
 /* footer */
 footer {
     padding: 20px 80px;
     width: 100%;
-    color: white;
-    background-color: black;
+    color: var(--w);
+    background-color: var(--b);
     display: block;
 }
 
@@ -160,7 +522,7 @@ footer {
 }
 
 .ihcl .subscribe .sub span {
-    color: grey;
+    color: var(--g);
     font-size: 18px;
     font-weight: bold;
 }
@@ -169,15 +531,15 @@ footer {
     padding: 10px 0;
     border: none;
     outline: none;
-    color: white;
+    color: var(--w);
     background-color: transparent;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--g);
     margin: 14px 0;
     font-size: 18px;
 }
 
 .inp button {
-    background-color: grey;
+    background-color: var(--g);
     margin: 14px 7px;
     padding: 10px;
     font-size: 18px;
@@ -188,7 +550,7 @@ footer {
 }
 
 .book span, .customer span {
-    color: rgb(107, 105, 105);
+    color: var(--g);
     font-size: 20px;
     font-weight: bold;
 }
@@ -203,7 +565,7 @@ footer {
 
 .book .bc a, .customer .cs a {
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    color: var(--gr);
     margin: 10px 0;
     font-size: 18px;
 }
@@ -213,7 +575,7 @@ footer {
 }
 
 .ihcl .linksf span {
-    color: grey;
+    color: var(--g);
     font-size: 20px;
     font-weight: bold;
 }
@@ -226,7 +588,7 @@ footer {
 .linksf .lnk a {
     padding-right: 50px;
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    color: var(--gr);
     margin: 5px 0;
     font-size: 20px;
 }
@@ -236,7 +598,7 @@ footer {
 }
 
 .ihcl .connect span {
-    color: grey;
+    color: var(--g);
     font-size: 20px;
     font-weight: bold;
 }
@@ -262,7 +624,7 @@ footer {
 }
 
 .destination .des {
-    color: grey;
+    color: var(--g);
 }
 
 .brand h1 {
@@ -288,7 +650,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    color: grey;
+    color: var(--g);
 }
 
 .copyl {
@@ -306,6 +668,6 @@ footer {
 .copyl div a {
     text-decoration: none;
     padding: 0 10px;
-    color: rgb(200, 200, 200);
+    color: var(--gr);
     font-size: 12px;
 }
